@@ -29,7 +29,7 @@ export function SiteFooter() {
           market conditions.
         </p>
         <p className="mt-4 text-xs text-slate-400">
-          © {new Date().getFullYear()} Digital Agency Buyers. All rights reserved.
+          © {new Date().getFullYear()} Digital Agency Business. All rights reserved.
         </p>
       </div>
     </footer>
