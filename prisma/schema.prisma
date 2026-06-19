@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Submission {
+  id              String   @id @default(uuid())
+  token           String   @unique
+  configVersion   String
+  firstName       String
+  email           String
+  company         String
+  phone           String?
+  agencyType      String?
+  yearsInBusiness Int?
+  saleTimeline    String?
+  marketingConsent Boolean @default(false)
+  reportConsent   Boolean  @default(false)
+  inputs          String
+  result          String
+  leadScore       String
+  createdAt       DateTime @default(now())
+  expiresAt       DateTime
+}
